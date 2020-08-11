@@ -1,0 +1,152 @@
+@import "./_overrides.scss";
+@import "@carbon/colors/scss/colors";
+
+$textarea-color: $carbon--white-0;
+$textarea-font-color: $carbon--cool-gray-50;
+$textarea-color-second: $carbon--cool-gray-10;
+$textarea-font-color-second: $carbon--cool-gray-10;
+$review-button-color: $carbon--cool-gray-50;
+$review-font-color: $carbon--cool-gray-10;
+$clean-review-button-color: $carbon--white-0;
+$clean-review-Button-font-color: $carbon--cool-gray-50;
+$icon-color: $carbon--blue-70;
+$icon-color-hover: $carbon--blue-50;
+
+.user-page-row .user-page-text-area {
+    right: 0;
+}
+
+.resultTextAreaMargin{
+    margin-top: 6.5em;
+}
+
+.user-page-text-area{
+    background: $textarea-color;
+    color: $textarea-font-color;
+    width: 100%;
+    border:solid 1px $textarea-color-second
+}
+
+.user-page-text-area-second{
+    background: $textarea-color-second;
+    color: $textarea-font-color-second;
+    width: 100%;
+}
+
+
+.review-button{
+    background: $review-button-color;
+    color: $review-font-color;
+}
+
+.clean-review-Button{
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: right;
+}
+
+.copy-Button{
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: left;
+}
+
+.click-here{
+    float: right;
+    margin-top: 1rem;
+}
+
+.welcome-div{
+    font-size: 3.5em;
+}
+
+.container-help {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.user-page-help{
+    font-weight: bold;
+    font-size: 1.5em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+svg.user-page-arrow{
+    position: relative;
+    background-size: 100px;
+    top: calc(50% - 16px);
+    left: calc(50% - 16px);
+}
+
+// MODAL 
+
+.bx--modal-container {
+    position: absolute;
+    top: 50px;
+    background-color: transparent;
+}
+
+.bx--modal-header {
+    display: none;
+}
+
+.bx--modal-content {
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.video-container  {
+    overflow: hidden;
+    width:100%;
+
+    &::after {
+        padding-top: 56.25%;
+        display: block;
+        content: '';
+    }
+
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+.bx--btn .bx--btn__icon {
+    width: 30px;
+    height: auto;
+}
+
+.btn-help {
+    color: $icon-color;
+    background-color: transparent;
+
+    &.bx--btn {
+        padding: 27px;
+        padding-top: 20px;
+    }
+
+    &:hover {
+        color: $icon-color-hover;
+        background-color: transparent;
+    }
+    &:focus {
+        border-color: transparent;
+        box-shadow: none;
+    }
+
+    &:active {
+        background-color: transparent;
+    }
+}

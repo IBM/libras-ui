@@ -1,0 +1,57 @@
+{
+  "name": "libras-ui",
+  "version": "1.0.0",
+  "author": "Filipe Corrêa <filipecorrea@br.ibm.com>",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "standard --fix",
+    "pretest": "standard",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@carbon/colors": "^10.11.0",
+    "@carbon/grid": "^10.13.0",
+    "@carbon/icons-react": "^10.14.0",
+    "@types/carbon__icons-react": "^10.11.0",
+    "axios": "^0.19.2",
+    "carbon-components": "^10.16.0",
+    "carbon-components-react": "^7.16.0",
+    "carbon-icons": "^7.0.7",
+    "node-sass": "^4.12.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "redux-mock-store": "^1.5.4",
+    "standard": "^12.0.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "standard": {
+    "envs": [
+      "jest"
+    ]
+  }
+}
