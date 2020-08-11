@@ -1,7 +1,7 @@
 {
   "name": "libras-ui",
   "version": "1.0.0",
-  "author": "Filipe Corrêa <filipecorrea@br.ibm.com>",
+  "description": "User interface for the Libras translation service.",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -11,6 +11,20 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "keywords": [
+    "ui",
+    "translation",
+    "service",
+    "spoken",
+    "signed",
+    "language"
+  ],
+  "author": {
+    "name": "Filipe Correa",
+    "email": "filipecorrea@me.com",
+    "url": "https://github.com/filipecorrea"
+  },
+  "license": "ISC",
   "dependencies": {
     "@carbon/colors": "^10.11.0",
     "@carbon/grid": "^10.13.0",
