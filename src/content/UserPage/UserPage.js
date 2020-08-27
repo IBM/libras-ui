@@ -68,6 +68,7 @@ const UserPage = () => {
                 >
                   <div className='video-container'>
                     <iframe src='https://player.vimeo.com/video/46398191'
+                      title='How it Works'
                       frameborder='0'
                       allow='autoplay; fullscreen'
                       allowfullscreen />
