@@ -1,5 +1,5 @@
 @import "./_overrides.scss";
-@import "@carbon/colors/scss/colors";
+@import '~@carbon/colors/scss/colors';
 
 $textarea-color: $carbon--white-0;
 $textarea-font-color: $carbon--cool-gray-50;
