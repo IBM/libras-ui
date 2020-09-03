@@ -8,7 +8,7 @@ const UserPage = () => {
   const [outputTextValue, outputTextSetValue] = React.useState('')
   const [loading, loadingSetValue] = React.useState('')
   const [copyButton, setCopyButton] = React.useState('')
-  const [copySuccess, setCopySuccess] = React.useState('')
+  const textAreaRef = React.useRef(null)
 
   const inputTextOnChange = e => {
     inputTextSetValue(e.target.value)
@@ -52,12 +52,10 @@ const UserPage = () => {
     inputTextSetValue('')
   }
 
-  const textAreaRef = React.useRef(null)
-  function copyToClipboard (e) {
+  function handleCopy (e) {
     textAreaRef.current.select()
     document.execCommand('copy')
     e.target.focus()
-    setCopySuccess('Copied!')
   };
 
   return (
@@ -73,7 +71,7 @@ const UserPage = () => {
                 <ModalWrapper
                   passiveModal
                   shouldCloseAfterSubmit
-                  handleSubmit={function noRefCheck () {}}
+                  handleSubmit={function noRefCheck () { }}
                   renderTriggerButtonIcon={Information32}
                   buttonTriggerClassName='btn-help'
                 >
@@ -129,16 +127,13 @@ const UserPage = () => {
               ref={textAreaRef}
             />
             <br />
-            <Button className='copy-Button' kind='secondary'>
-              Copiar texto
-            </Button>
             {copyButton
               ? <Button
-                onClick={copyToClipboard}
-                className='copy-Button-2'
+                onClick={handleCopy}
+                className='copy-Button'
                 kind='secondary'
               >
-                {copySuccess ? 'Completar!' : 'Copiar'}
+                Copiar texto
               </Button> : null}
             <div className='click-here'>
               <span>

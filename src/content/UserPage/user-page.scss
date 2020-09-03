@@ -45,19 +45,15 @@ $icon-color-hover: $carbon--blue-50;
     float: right;
 }
 
-.copy-Button{
-    background: $clean-review-button-color;
-    color: $textarea-font-color;
-    float: left;
-}
-
 .bx--col-lg-5 {
     position: relative;
 }
 
-.bx--col-lg-5 .copy-Button-2 {
+.copy-Button{
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
     position: absolute;
-    top: 1 + 0.6875rem;
+    top: 1.6875rem;
     right: 1rem;
 }
 
@@ -96,7 +92,7 @@ svg.user-page-arrow{
     left: calc(50% - 16px);
 }
 
-// MODAL
+// MODAL 
 
 .bx--modal-container {
     position: absolute;
