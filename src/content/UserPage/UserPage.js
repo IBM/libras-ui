@@ -52,7 +52,7 @@ const UserPage = () => {
     inputTextSetValue('')
   }
 
-  function handleCopy (e) {
+  const handleCopy = e => {
     textAreaRef.current.select()
     document.execCommand('copy')
     e.target.focus()
