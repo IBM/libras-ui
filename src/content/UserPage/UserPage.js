@@ -56,7 +56,7 @@ const UserPage = () => {
     textAreaRef.current.select()
     document.execCommand('copy')
     e.target.focus()
-  };
+  }
 
   return (
     <div>
