@@ -45,16 +45,10 @@ $icon-color-hover: $carbon--blue-50;
     float: right;
 }
 
-.bx--col-lg-5 {
-    position: relative;
-}
-
 .copy-Button{
     background: $clean-review-button-color;
     color: $textarea-font-color;
-    position: absolute;
-    top: 1.6875rem;
-    right: 1rem;
+    float: left;
 }
 
 .click-here{
