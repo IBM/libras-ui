@@ -71,7 +71,7 @@ const UserPage = () => {
                 <ModalWrapper
                   passiveModal
                   shouldCloseAfterSubmit
-                  handleSubmit={function noRefCheck () { }}
+                  handleSubmit={function noRefCheck () {}}
                   renderTriggerButtonIcon={Information32}
                   buttonTriggerClassName='btn-help'
                 >
