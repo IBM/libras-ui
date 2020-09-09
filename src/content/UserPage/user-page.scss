@@ -45,10 +45,24 @@ $icon-color-hover: $carbon--blue-50;
     float: right;
 }
 
+.clean-review-Button:focus {
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: right;
+    border: 0;
+}
+
 .copy-Button{
     background: $clean-review-button-color;
     color: $textarea-font-color;
     float: left;
+}
+
+.copy-Button:focus {
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: left;
+    border: 0;
 }
 
 .click-here{
