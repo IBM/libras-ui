@@ -111,7 +111,7 @@ const UserPage = () => {
           <div className='bx--col-lg-5'>
             <TextArea
               value={outputTextValue}
-              labelText='Sign language' 
+              labelText='Sign language'
               rows={20}
               className='user-page-text-area-second'
               placeholder='Translation'
