@@ -70,7 +70,6 @@ const UserPage = () => {
                     <iframe src='https://player.vimeo.com/video/46398191'
                       title='How it Works'
                       frameBorder='0'
-                      allow='autoplay; fullscreen'
                       allowFullScreen />
                   </div>
                 </ModalWrapper>
