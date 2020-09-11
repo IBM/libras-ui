@@ -4,7 +4,7 @@
 $textarea-color: $carbon--white-0;
 $textarea-font-color: $carbon--cool-gray-50;
 $textarea-color-second: $carbon--cool-gray-10;
-$textarea-font-color-second: $carbon--cool-gray-10;
+$textarea-font-color-second: $carbon--black-100;
 $review-button-color: $carbon--cool-gray-50;
 $review-font-color: $carbon--cool-gray-10;
 $clean-review-button-color: $carbon--white-0;
@@ -45,10 +45,24 @@ $icon-color-hover: $carbon--blue-50;
     float: right;
 }
 
+.clean-review-Button:focus {
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: right;
+    border: 0;
+}
+
 .copy-Button{
     background: $clean-review-button-color;
     color: $textarea-font-color;
     float: left;
+}
+
+.copy-Button:focus {
+    background: $clean-review-button-color;
+    color: $textarea-font-color;
+    float: left;
+    border: 0;
 }
 
 .click-here{
