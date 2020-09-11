@@ -7,9 +7,9 @@ const AdminPage = () => (
       <div className='bx--col-lg-4'>
         <div >New phrases</div>
         <br />
-        <TextArea labelText='Spoken language' placeholder='Insert text' rows='5' />
+        <TextArea labelText='Sign language text' placeholder='Insert text' rows='5' />
         <br />
-        <TextArea labelText='Sign language' placeholder='Insert translation' rows='5' />
+        <TextArea labelText='Spoken language text' placeholder='Insert text' rows='5' />
         <br />
         <Button>Submit</Button>
       </div>

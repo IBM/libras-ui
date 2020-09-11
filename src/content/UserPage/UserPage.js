@@ -82,7 +82,7 @@ const UserPage = () => {
           <div className='bx--col-lg-5'>
             <TextArea
               id='textoASerCorrigido'
-              labelText='Spoken language'
+              labelText='Your text (sign language)'
               placeholder='Insert text'
               rows={20}
               onChange={inputTextOnChange}
@@ -95,7 +95,7 @@ const UserPage = () => {
               className='review-button'
               kind='secondary'
             >
-              Translate
+              Review
             </Button>
             <Button
               onClick={cleanText}
@@ -111,10 +111,9 @@ const UserPage = () => {
           <div className='bx--col-lg-5'>
             <TextArea
               value={outputTextValue}
-              labelText='Sign language'
+              labelText='Revised text'
               rows={20}
               className='user-page-text-area-second'
-              placeholder='Translation'
             />
             <br />
             <Button className='copy-Button' kind='secondary'>
