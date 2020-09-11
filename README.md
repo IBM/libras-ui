@@ -1,6 +1,6 @@
 # Libras UI
 
-User interface for the translation service between a spoken and a signed language.
+User interface for the [Libras](https://github.com/IBM/libras) translation service between a spoken and a signed language.
 
 ## Prerequisites
 
@@ -14,12 +14,19 @@ Install project dependencies:
 npm install
 ```
 
-Create an `.env` file to mock the API or specify API URL and access token:
+Create an `.env` file to mock the [Libras](https://github.com/IBM/libras) service or specify the API URL:
 
-```console
-REACT_APP_API_MOCK=TRUE
-REACT_APP_API_SERVICE_URL=
-REACT_APP_LIBRAS_API_TOKEN=
+```env
+REACT_APP_API_MOCK=FALSE
+REACT_APP_API_SERVICE_URL=http://localhost:3000
+```
+
+### Customize
+
+Create an `.env` file to update the application running port. The variable name and default value is:
+
+```env
+PORT=3000
 ```
 
 ## Run
@@ -29,11 +36,6 @@ Start the application in the development mode:
 ```console
 npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
 ## Test
 
