@@ -7,6 +7,8 @@ const UserPage = () => {
   const [inputTextValue, inputTextSetValue] = React.useState('')
   const [outputTextValue, outputTextSetValue] = React.useState('')
   const [loading, loadingSetValue] = React.useState('')
+  const [copyButton, setCopyButton] = React.useState('')
+  const textAreaRef = React.useRef(null)
 
   const inputTextOnChange = e => {
     inputTextSetValue(e.target.value)
@@ -43,10 +45,17 @@ const UserPage = () => {
       xhr.send(inputTextValue)
       loadingSetValue(true)
     }
+    setCopyButton(true)
   }
 
   const cleanText = () => {
     inputTextSetValue('')
+  }
+
+  const handleCopy = e => {
+    textAreaRef.current.select()
+    document.execCommand('copy')
+    e.target.focus()
   }
 
   return (
@@ -114,11 +123,17 @@ const UserPage = () => {
               rows={20}
               className='user-page-text-area-second'
               placeholder='Texto revisado'
+              ref={textAreaRef}
             />
             <br />
-            <Button className='copy-Button' kind='secondary'>
-              Copiar texto
-            </Button>
+            {copyButton
+              ? <Button
+                onClick={handleCopy}
+                className='copy-Button'
+                kind='secondary'
+              >
+                Copiar texto
+              </Button> : null}
             <div className='click-here'>
               <span>
                 <strong>A revisão não está correta?</strong>
