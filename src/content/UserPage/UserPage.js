@@ -55,9 +55,9 @@ const UserPage = () => {
       <div className='bx--grid bx--grid--full-width user-page'>
         <div className='bx--row user-page-row'>
           <div className='bx--col-lg-5'>
-            <div className='welcome-div'>Bem Vindo!</div>
+            <div className='welcome-div'>Welcome!</div>
             <div className='container-help'>
-              <span className='user-page-help'>Saiba como funciona</span>
+              <span className='user-page-help'>How it works</span>
               <div className='info-icon'>
                 <ModalWrapper
                   passiveModal
@@ -81,8 +81,8 @@ const UserPage = () => {
           <div className='bx--col-lg-5'>
             <TextArea
               id='textoASerCorrigido'
-              labelText='Seu texto'
-              placeholder='Escreva seu texto aqui'
+              labelText='Your text (sign language)'
+              placeholder='Insert text'
               rows={20}
               onChange={inputTextOnChange}
               value={inputTextValue}
@@ -94,14 +94,14 @@ const UserPage = () => {
               className='review-button'
               kind='secondary'
             >
-              Revisar texto
+              Review
             </Button>
             <Button
               onClick={cleanText}
               className='clean-review-Button'
               kind='secondary'
             >
-              Limpar texto
+              Clear
             </Button>
           </div>
           <div className='bx--col-lg-2'>
@@ -109,21 +109,17 @@ const UserPage = () => {
           </div>
           <div className='bx--col-lg-5'>
             <TextArea
-              labelText='Revisão'
               value={outputTextValue}
+              labelText='Revised text'
               rows={20}
               className='user-page-text-area-second'
-              placeholder='Texto revisado'
             />
             <br />
             <Button className='copy-Button' kind='secondary'>
-              Copiar texto
+              Copy
             </Button>
             <div className='click-here'>
-              <span>
-                <strong>A revisão não está correta?</strong>
-              </span>{' '}
-              <span>Clique aqui</span>
+              <strong>Incorrect review?</strong>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@ const PageHeader = () => (
   <Header aria-label='Projeto Libras'>
     <SkipToContent />
     <HeaderName element={Link} to='/' prefix='IBM'>
-      Revisor de Texto Libras
+      Libras
     </HeaderName>
     <HeaderNavigation aria-label='Projeto Libras'>
       <HeaderMenuItem element={Link} to='/admin'>

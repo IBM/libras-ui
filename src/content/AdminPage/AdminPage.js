@@ -5,20 +5,20 @@ const AdminPage = () => (
   <div className='bx--grid'>
     <div className='bx--row'>
       <div className='bx--col-lg-4'>
-        <div >Inserção de novas frases </div>
+        <div >New phrases</div>
         <br />
-        <TextArea labelText='Insira uma nova frase' placeholder='Insira o texto aqui' rows='5' />
+        <TextArea labelText='Sign language text' placeholder='Insert text' rows='5' />
         <br />
-        <TextArea labelText='Insira a frase corrigida' rows='5' />
+        <TextArea labelText='Spoken language text' placeholder='Insert text' rows='5' />
         <br />
-        <Button>Submeter</Button>
+        <Button>Submit</Button>
       </div>
       <div className='bx--col-lg-4'>
-        <div>Inserção de novas frases - JSON</div>
+        <div>New phrases (JSON)</div>
         <br />
-        <TextArea labelText='Insira o JSON com as frases a serem adicionadas' placeholder='Insira o JSON aqui' rows='13' />
+        <TextArea labelText='Insert JSON' placeholder='Insert JSON' rows='13' />
         <br />
-        <Button>Submeter</Button>
+        <Button>Submit</Button>
       </div>
     </div>
   </div>
