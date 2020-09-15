@@ -111,6 +111,7 @@ const UserPage = () => {
             <TextArea
               value={outputTextValue}
               labelText='Revised text'
+              placeholder='Your revised text will appear here'
               rows={20}
               className='user-page-text-area-second'
             />
