@@ -81,7 +81,7 @@ const UserPage = () => {
           <div className='bx--col-lg-5'>
             <TextArea
               id='textoASerCorrigido'
-              labelText='Your text (sign language)'
+              labelText='Your text'
               placeholder='Insert text'
               rows={20}
               onChange={inputTextOnChange}
@@ -94,14 +94,14 @@ const UserPage = () => {
               className='review-button'
               kind='secondary'
             >
-              Review
+              Review Text
             </Button>
             <Button
               onClick={cleanText}
               className='clean-review-Button'
               kind='secondary'
             >
-              Clear
+              Clear Text
             </Button>
           </div>
           <div className='bx--col-lg-2'>
@@ -111,12 +111,13 @@ const UserPage = () => {
             <TextArea
               value={outputTextValue}
               labelText='Revised text'
+              placeholder='Your revised text will appear here'
               rows={20}
               className='user-page-text-area-second'
             />
             <br />
             <Button className='copy-Button' kind='secondary'>
-              Copy
+              Copy Text
             </Button>
             <div className='click-here'>
               <strong>Incorrect review?</strong>
