@@ -25,22 +25,23 @@ const UserPage = () => {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === window.XMLHttpRequest.DONE) {
           console.log(xhr.responseText)
+          const responseJSON = JSON.parse(xhr.responseText)
           let correctedText = ''
           if (xhr.status === 200) {
             // Format server response
-            correctedText = formatServerOutput(xhr.responseText)
+            correctedText = formatServerOutput(responseJSON.spoken)
           } else {
-            correctedText = 'ERROR!!!! ' + xhr.responseText
+            correctedText = 'ERROR!!!! ' + responseJSON.spoken
           }
           outputTextSetValue(correctedText)
         }
         loadingSetValue(false)
       }
-      xhr.open('POST', process.env.REACT_APP_API_SERVICE_URL, true)
+      const url = process.env.REACT_APP_API_SERVICE_URL + '?text=' + JSON.stringify(inputTextValue)
+      xhr.open('GET', url, true)
       xhr.setRequestHeader('Accept', '*/*')
       xhr.setRequestHeader('Content-Type', 'text/plain')
-      xhr.setRequestHeader('authorization', `Bearer ${process.env.REACT_APP_LIBRAS_API_TOKEN}`)
-      xhr.send(inputTextValue)
+      xhr.send()
       loadingSetValue(true)
     }
   }

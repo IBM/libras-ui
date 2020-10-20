@@ -1,8 +1,10 @@
-function formatServerOutput (outputString) {
-  const outputArray = JSON.parse(outputString)
-  const outputText = outputArray.reduce((accumulator, currentValue) => {
-    return accumulator + '- ' + currentValue + '\n'
-  }, '')
+function formatServerOutput (response) {
+  let outputText = response
+  if (response instanceof Array) {
+    outputText = response.reduce((accumulator, currentValue) => {
+      return accumulator + '- ' + currentValue + '\n'
+    }, '')
+  }
   return outputText
 }
 
