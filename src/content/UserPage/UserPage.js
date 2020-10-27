@@ -25,23 +25,23 @@ const UserPage = () => {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === window.XMLHttpRequest.DONE) {
           console.log(xhr.responseText)
-          const responseJSON = xhr.responseText !== '' ? JSON.parse(xhr.responseText) : ''
+          const response = xhr.responseText !== '' ? JSON.parse(xhr.responseText) : ''
           let correctedText = ''
           if (xhr.status === 200) {
-            if (responseJSON.spoken && responseJSON.spoken !== '') {
+            if (response.spoken && response.spoken !== '') {
               // Format server response
-              correctedText = formatServerOutput(responseJSON.spoken)
+              correctedText = formatServerOutput(response.spoken)
             } else {
               correctedText = 'NO TRANSLATION FOUND!!!!'
             }
           } else {
-            correctedText = 'ERROR!!!! ' + responseJSON.spoken
+            correctedText = 'ERROR!!!! ' + response.spoken
           }
           outputTextSetValue(correctedText)
         }
         loadingSetValue(false)
       }
-      const url = process.env.REACT_APP_API_SERVICE_URL + '?text=' + inputTextValue
+      const url = `${process.env.REACT_APP_API_SERVICE_URL}?text=${inputTextValue}`
       xhr.open('GET', url, true)
       xhr.setRequestHeader('Accept', '*/*')
       xhr.setRequestHeader('Content-Type', 'text/plain')
