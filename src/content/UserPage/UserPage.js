@@ -25,22 +25,27 @@ const UserPage = () => {
       xhr.onreadystatechange = function () {
         if (xhr.readyState === window.XMLHttpRequest.DONE) {
           console.log(xhr.responseText)
+          const response = xhr.responseText !== '' ? JSON.parse(xhr.responseText) : ''
           let correctedText = ''
           if (xhr.status === 200) {
-            // Format server response
-            correctedText = formatServerOutput(xhr.responseText)
+            if (response.spoken && response.spoken !== '') {
+              // Format server response
+              correctedText = formatServerOutput(response.spoken)
+            } else {
+              correctedText = 'NO TRANSLATION FOUND!!!!'
+            }
           } else {
-            correctedText = 'ERROR!!!! ' + xhr.responseText
+            correctedText = 'ERROR!!!! ' + response.spoken
           }
           outputTextSetValue(correctedText)
         }
         loadingSetValue(false)
       }
-      xhr.open('POST', process.env.REACT_APP_API_SERVICE_URL, true)
+      const url = `${process.env.REACT_APP_API_SERVICE_URL}?text=${inputTextValue}`
+      xhr.open('GET', url, true)
       xhr.setRequestHeader('Accept', '*/*')
       xhr.setRequestHeader('Content-Type', 'text/plain')
-      xhr.setRequestHeader('authorization', `Bearer ${process.env.REACT_APP_LIBRAS_API_TOKEN}`)
-      xhr.send(inputTextValue)
+      xhr.send()
       loadingSetValue(true)
     }
   }
